@@ -114,7 +114,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJS-iZ-ijI">
-                                <rect key="frame" x="16" y="250" width="343" height="30"/>
+                                <rect key="frame" x="16" y="262" width="343" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,7 +124,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="taU-AH-zpx">
-                                <rect key="frame" x="16" y="288" width="343" height="30"/>
+                                <rect key="frame" x="16" y="312" width="343" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -134,7 +134,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPr-EK-tea">
-                                <rect key="frame" x="16" y="326" width="343" height="30"/>
+                                <rect key="frame" x="16" y="362" width="343" height="30"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -160,16 +160,16 @@
                             <constraint firstItem="NDw-Wv-1Ks" firstAttribute="top" secondItem="ZgQ-lj-dNd" secondAttribute="bottom" constant="100" id="82G-rS-c4Q"/>
                             <constraint firstItem="0Ls-VW-0Lc" firstAttribute="trailing" secondItem="taU-AH-zpx" secondAttribute="trailing" constant="16" id="9YD-cA-fQk"/>
                             <constraint firstItem="ZgQ-lj-dNd" firstAttribute="top" secondItem="0Ls-VW-0Lc" secondAttribute="top" id="Ane-db-cEz"/>
-                            <constraint firstItem="lJS-iZ-ijI" firstAttribute="top" secondItem="NDw-Wv-1Ks" secondAttribute="bottom" constant="8" id="EIf-O4-nrI"/>
+                            <constraint firstItem="lJS-iZ-ijI" firstAttribute="top" secondItem="NDw-Wv-1Ks" secondAttribute="bottom" constant="20" id="EIf-O4-nrI"/>
                             <constraint firstItem="0Ls-VW-0Lc" firstAttribute="trailing" secondItem="lJS-iZ-ijI" secondAttribute="trailing" constant="16" id="StI-kr-Uph"/>
-                            <constraint firstItem="KPr-EK-tea" firstAttribute="top" secondItem="taU-AH-zpx" secondAttribute="bottom" constant="8" id="TQS-KZ-XN8"/>
+                            <constraint firstItem="KPr-EK-tea" firstAttribute="top" secondItem="taU-AH-zpx" secondAttribute="bottom" constant="20" id="TQS-KZ-XN8"/>
                             <constraint firstItem="lJS-iZ-ijI" firstAttribute="leading" secondItem="0Ls-VW-0Lc" secondAttribute="leading" constant="16" id="ag0-GV-j8c"/>
                             <constraint firstItem="0Ls-VW-0Lc" firstAttribute="trailing" secondItem="KPr-EK-tea" secondAttribute="trailing" constant="16" id="fFu-A0-QT0"/>
                             <constraint firstItem="NDw-Wv-1Ks" firstAttribute="leading" secondItem="0Ls-VW-0Lc" secondAttribute="leading" constant="16" id="mSB-9a-xG5"/>
                             <constraint firstItem="taU-AH-zpx" firstAttribute="leading" secondItem="0Ls-VW-0Lc" secondAttribute="leading" constant="16" id="q2u-xG-KUM"/>
                             <constraint firstItem="0Ls-VW-0Lc" firstAttribute="trailing" secondItem="NDw-Wv-1Ks" secondAttribute="trailing" constant="16" id="sd4-d5-7X1"/>
                             <constraint firstItem="0Ls-VW-0Lc" firstAttribute="trailing" secondItem="ZgQ-lj-dNd" secondAttribute="trailing" constant="16" id="tAp-SG-OIc"/>
-                            <constraint firstItem="taU-AH-zpx" firstAttribute="top" secondItem="lJS-iZ-ijI" secondAttribute="bottom" constant="8" id="tu6-WX-CWZ"/>
+                            <constraint firstItem="taU-AH-zpx" firstAttribute="top" secondItem="lJS-iZ-ijI" secondAttribute="bottom" constant="20" id="tu6-WX-CWZ"/>
                             <constraint firstItem="ZgQ-lj-dNd" firstAttribute="leading" secondItem="0Ls-VW-0Lc" secondAttribute="leading" constant="16" id="zWf-GA-IIf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Ls-VW-0Lc"/>
