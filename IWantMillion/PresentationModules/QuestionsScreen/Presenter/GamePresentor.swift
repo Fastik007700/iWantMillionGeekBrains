@@ -15,19 +15,24 @@ final class GamePresentor: BasePresentor {
     fileprivate var interactor: GameInteractorInput
     fileprivate var router: GameRouterInput
     
+    private var strategy: Strategy
+    
     private var question: Question!
     
-    init(view: GameViewControllerInput, interactor: GameInteractorInput, router: GameRouterInput) {
+    init(view: GameViewControllerInput, interactor: GameInteractorInput, router: GameRouterInput, withStrategy: Strategy) {
         self.view = view
         self.interactor = interactor
         self.router = router
+        self.strategy = withStrategy
     }
 }
 
 extension GamePresentor: GameViewControllerOutput {
     
     func viewLoaded() {
-        guard let question = interactor.getQuestion() else {return}
+        
+        guard let question = interactor.getQuestion(withStrategy: self.strategy) else {return}
+        
         self.question = question
         view.getQuestionText(question: self.question)
     }
@@ -69,7 +74,7 @@ extension GamePresentor: GameInteractorOutput {
             self.progressiveService.show(answerType: .lastQuestion, complection: { [weak self] in self?.router.stopGame()})
         }
         else {
-            guard let question = interactor.getQuestion() else {return}
+            guard let question = interactor.getQuestion(withStrategy: self.strategy) else {return}
             self.question = question
             
             self.progressiveService.show(answerType: .correct, complection:{ [weak self] in self?.view.getQuestionText(question: question)})

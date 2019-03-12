@@ -10,6 +10,6 @@ import Foundation
 
 protocol QuestionService {
     
-    func getQuestion() -> Question
+    func getQuestion(withStrategy: Strategy)  -> Question
     func getQuestionQuality() -> Int
 }

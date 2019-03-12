@@ -18,4 +18,7 @@ protocol StartViewControllerOutput: class {
     func tapStartGame()
     
     func tapResults()
+    
+    func checkStrategy(strategyNumber: Int)
+    
 }

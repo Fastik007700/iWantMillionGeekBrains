@@ -11,4 +11,5 @@ import Foundation
 protocol StartInteractorInput {
     
     func getBestResult() -> Int
+    func getStrategy(strategyNumber: Int) -> Strategy
 }

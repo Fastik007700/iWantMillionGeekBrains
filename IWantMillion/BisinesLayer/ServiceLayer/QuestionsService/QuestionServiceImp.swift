@@ -10,6 +10,9 @@ import Foundation
 
 final class QuestionServiceImp: QuestionService {
     
+    private var questionSequenseStrategy: GameStrategyProtocol = InSequenseStrategy()
+    private var finalQuestionSequense: [Question] = []
+    
     func getQuestionQuality() -> Int {
         
         return getAllQuestions().count
@@ -18,9 +21,21 @@ final class QuestionServiceImp: QuestionService {
     
     private var questionNumber = -1
     
-    func getQuestion() -> Question {
+
+    
+    func getQuestion(withStrategy: Strategy) -> Question {
+       
+        if questionNumber == -1 { // капец костыль
+        switch withStrategy {
+        case .inSequense:
+          self.finalQuestionSequense = self.questionSequenseStrategy.getQuestion(questionSequense: getAllQuestions())
+        case .random:
+            self.questionSequenseStrategy = RandomStrategy()
+            self.finalQuestionSequense = self.questionSequenseStrategy.getQuestion(questionSequense: getAllQuestions())
+        }
+        }
         questionNumber += 1
-        return getAllQuestions()[questionNumber]
+        return finalQuestionSequense[questionNumber]
     }
 
     

@@ -15,6 +15,8 @@ final class StartPresentor {
     fileprivate var router: StartRouterInput
     fileprivate var view: StartViewControllerInput
     
+    private var strategy: Strategy!
+    
     init(interactor: StartInteractorInput, router: StartRouterInput, view: StartViewControllerInput) {
         
         self.view = view
@@ -25,6 +27,10 @@ final class StartPresentor {
 
 extension StartPresentor: StartViewControllerOutput {
     
+    func checkStrategy(strategyNumber: Int) {
+        self.strategy = interactor.getStrategy(strategyNumber: strategyNumber)
+    }
+    
     func viewDidAppeared() {
         self.view.setBestResultWith(value: interactor.getBestResult())
     }
@@ -34,7 +40,7 @@ extension StartPresentor: StartViewControllerOutput {
     }
     
     func tapStartGame() {
-        self.router.showGameScreen()
+        self.router.showGameScreen(withStrategy: self.strategy)
     }
     
     func tapResults() {

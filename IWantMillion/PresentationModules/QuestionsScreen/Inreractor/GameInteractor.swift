@@ -23,6 +23,8 @@ final class GameInteractor {
 }
 
 extension GameInteractor: GameInteractorInput {
+
+    
     func saveResult(result: Result) {
         
         var arrayOfResult = dataService.loadResults()
@@ -36,8 +38,8 @@ extension GameInteractor: GameInteractorInput {
         return self.correctAswerCount
     }
     
-    func getQuestion() -> Question? {
-        return self.questionService.getQuestion()
+    func getQuestion(withStrategy: Strategy) -> Question? {
+        return self.questionService.getQuestion(withStrategy: withStrategy) // доделать для стратегии
     }
     
     func getQuestionsCount() -> Int {

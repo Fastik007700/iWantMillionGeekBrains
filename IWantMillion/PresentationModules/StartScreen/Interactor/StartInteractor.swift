@@ -39,4 +39,17 @@ extension StartInteractor: StartInteractorInput {
     }
     
     
+    func getStrategy(strategyNumber: Int) -> Strategy {
+        
+        switch strategyNumber {
+        case 0:
+            return Strategy.random
+        case 1:
+            return Strategy.inSequense
+        default:
+            return Strategy.inSequense
+        }
+    }
+    
+    
 }

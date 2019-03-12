@@ -13,8 +13,8 @@ class StartRouter: StartRouterInput {
     
     weak var transitionHandler: TransitionHandler?
     
-    func showGameScreen() {
-        let vc = GameAssambly.createViewControllerAndAssemblyModule()
+    func showGameScreen(withStrategy: Strategy) {
+        let vc = GameAssambly.createViewControllerAndAssemblyModule(withStrategy: withStrategy)
         transitionHandler?.pushModule(withViewController: vc)
     }
     

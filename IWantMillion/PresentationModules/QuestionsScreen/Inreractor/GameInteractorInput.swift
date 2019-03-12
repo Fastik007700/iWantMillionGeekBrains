@@ -11,7 +11,7 @@ import Foundation
 
 protocol GameInteractorInput: class {
     
-    func getQuestion() -> Question?
+    func getQuestion(withStrategy:Strategy) -> Question?
     
     func getQuestionsCount() -> Int
     

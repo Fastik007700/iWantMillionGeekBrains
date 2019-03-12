@@ -13,17 +13,17 @@ final class StartViewController: UIViewController {
            var outputView: StartViewControllerOutput?
     @IBOutlet weak var resultLabel: UILabel!
     
-
+    @IBOutlet weak var questionSequenseControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         outputView?.viewLoaded()
-       // setupUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         outputView?.viewDidAppeared()
+        outputView?.checkStrategy(strategyNumber: questionSequenseControl.selectedSegmentIndex)
     }
     
     func setupUI() {
@@ -31,13 +31,13 @@ final class StartViewController: UIViewController {
     }
     
     @IBAction func startGame(_ sender: Any) {
+        outputView?.checkStrategy(strategyNumber: questionSequenseControl.selectedSegmentIndex)
         outputView?.tapStartGame()
     }
     
     @IBAction func showResults(_ sender: Any) {
         outputView?.tapResults()
     }
-    
 }
 
 extension StartViewController: StartViewControllerInput {

@@ -50,6 +50,9 @@
 		745B99352235835600BD254E /* GamePresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B99342235835600BD254E /* GamePresentor.swift */; };
 		745B99382235962F00BD254E /* GameAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B99372235962F00BD254E /* GameAssambly.swift */; };
 		745B993A2236E16300BD254E /* BasePresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B99392236E16300BD254E /* BasePresentor.swift */; };
+		745B994422382FB500BD254E /* GameStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B994322382FB500BD254E /* GameStrategy.swift */; };
+		745B9946223830AE00BD254E /* RandomStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B9945223830AE00BD254E /* RandomStrategy.swift */; };
+		745B994822383AB000BD254E /* InSequenseStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B994722383AB000BD254E /* InSequenseStrategy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +113,9 @@
 		745B99342235835600BD254E /* GamePresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresentor.swift; sourceTree = "<group>"; };
 		745B99372235962F00BD254E /* GameAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssambly.swift; sourceTree = "<group>"; };
 		745B99392236E16300BD254E /* BasePresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresentor.swift; sourceTree = "<group>"; };
+		745B994322382FB500BD254E /* GameStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStrategy.swift; sourceTree = "<group>"; };
+		745B9945223830AE00BD254E /* RandomStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStrategy.swift; sourceTree = "<group>"; };
+		745B994722383AB000BD254E /* InSequenseStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InSequenseStrategy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +202,7 @@
 		743004CB22353D6C00868701 /* ServiceLayer */ = {
 			isa = PBXGroup;
 			children = (
+				745B994222382F2500BD254E /* StrategyService */,
 				743004F922355D6400868701 /* DataService */,
 				743004DC223544DA00868701 /* GameService */,
 				743004D12235405A00868701 /* QuestionsService */,
@@ -423,6 +430,16 @@
 			path = Assambly;
 			sourceTree = "<group>";
 		};
+		745B994222382F2500BD254E /* StrategyService */ = {
+			isa = PBXGroup;
+			children = (
+				745B994322382FB500BD254E /* GameStrategy.swift */,
+				745B9945223830AE00BD254E /* RandomStrategy.swift */,
+				745B994722383AB000BD254E /* InSequenseStrategy.swift */,
+			);
+			path = StrategyService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -528,6 +545,7 @@
 				743005042235650B00868701 /* StartRouter.swift in Sources */,
 				743004C722353BEF00868701 /* DIContainer.swift in Sources */,
 				743004C922353C5B00868701 /* PresentationContainer.swift in Sources */,
+				745B9946223830AE00BD254E /* RandomStrategy.swift in Sources */,
 				745B992922357D3D00BD254E /* GameViewControllerOutput.swift in Sources */,
 				741208C0222E7D4400F1DD12 /* Questions.swift in Sources */,
 				743004DE223544F000868701 /* GameService.swift in Sources */,
@@ -558,7 +576,9 @@
 				743004CF22353DCF00868701 /* ProgressServiceImp.swift in Sources */,
 				745B992F2235803800BD254E /* GameInteractorOutput.swift in Sources */,
 				743004CD22353D9D00868701 /* ProgressService.swift in Sources */,
+				745B994422382FB500BD254E /* GameStrategy.swift in Sources */,
 				743004F52235596500868701 /* StartInteractorInput.swift in Sources */,
+				745B994822383AB000BD254E /* InSequenseStrategy.swift in Sources */,
 				743005062235653300868701 /* StartRouterInput.swift in Sources */,
 				7430050E2235696500868701 /* StartAssambly.swift in Sources */,
 				74300502223564A100868701 /* StartPresentor.swift in Sources */,

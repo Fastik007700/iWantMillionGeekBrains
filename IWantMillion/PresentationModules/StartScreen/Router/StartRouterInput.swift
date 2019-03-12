@@ -10,7 +10,7 @@ import Foundation
 
 protocol StartRouterInput {
     
-    func showGameScreen()
+    func showGameScreen(withStrategy: Strategy)
     
     func showResultsScreen()
 }
