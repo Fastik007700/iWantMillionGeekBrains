@@ -17,6 +17,35 @@ import UIKit
 
 
 final class ProgressServiceImp: ProgressService {
+
+    
+    
+    func showAlertWhenFinishAddingQuestion(complection: @escaping () -> Void) {
+        
+         let allertViewController = UIAlertController(title: "Успешно", message: "", preferredStyle: .alert)
+        
+        let correctAnswerAction = UIAlertAction(title: "Закончить", style: .cancel) { _ in
+            complection()
+        }
+        
+          allertViewController.addAction(correctAnswerAction)
+        UIApplication.shared.keyWindow?.rootViewController?.present(allertViewController, animated: true, completion: nil)
+    }
+    
+    func showAlertAboutEmptyText() {
+        
+        let allertViewController = UIAlertController(title: "Пустой текст", message: "", preferredStyle: .alert)
+        
+        let correctAnswerAction = UIAlertAction(title: "Окей", style: .cancel) { _ in
+          
+        }
+        
+        allertViewController.addAction(correctAnswerAction)
+        UIApplication.shared.keyWindow?.rootViewController?.present(allertViewController, animated: true, completion: nil)
+    }
+        
+    
+    
     
     
     private func setupAlertViewController(aswerType: AswerType, complection: @escaping () -> Void) {

@@ -33,12 +33,12 @@
 		743004FB22355D8200868701 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743004FA22355D8200868701 /* DataService.swift */; };
 		743004FE22355E1200868701 /* DataServiceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743004FD22355E1200868701 /* DataServiceImp.swift */; };
 		7430050022355EF600868701 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743004FF22355EF600868701 /* Result.swift */; };
-		74300502223564A100868701 /* StartPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74300501223564A100868701 /* StartPresentor.swift */; };
+		74300502223564A100868701 /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74300501223564A100868701 /* StartPresenter.swift */; };
 		743005042235650B00868701 /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743005032235650B00868701 /* StartRouter.swift */; };
 		743005062235653300868701 /* StartRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743005052235653300868701 /* StartRouterInput.swift */; };
 		74300509223565FB00868701 /* TransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74300508223565FB00868701 /* TransitionHandler.swift */; };
 		7430050C2235669200868701 /* UIViewController + TransitionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7430050B2235669200868701 /* UIViewController + TransitionHandler.swift */; };
-		7430050E2235696500868701 /* StartAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7430050D2235696500868701 /* StartAssambly.swift */; };
+		7430050E2235696500868701 /* StartAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7430050D2235696500868701 /* StartAssembly.swift */; };
 		745B992422357D0000BD254E /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B992322357D0000BD254E /* GameViewController.swift */; };
 		745B992722357D2A00BD254E /* GameViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B992622357D2A00BD254E /* GameViewControllerInput.swift */; };
 		745B992922357D3D00BD254E /* GameViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B992822357D3D00BD254E /* GameViewControllerOutput.swift */; };
@@ -47,12 +47,21 @@
 		745B992F2235803800BD254E /* GameInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B992E2235803800BD254E /* GameInteractorOutput.swift */; };
 		745B9931223582C000BD254E /* GameRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B9930223582C000BD254E /* GameRouter.swift */; };
 		745B9933223582D200BD254E /* GameRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B9932223582D200BD254E /* GameRouterInput.swift */; };
-		745B99352235835600BD254E /* GamePresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B99342235835600BD254E /* GamePresentor.swift */; };
-		745B99382235962F00BD254E /* GameAssambly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B99372235962F00BD254E /* GameAssambly.swift */; };
-		745B993A2236E16300BD254E /* BasePresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B99392236E16300BD254E /* BasePresentor.swift */; };
+		745B99352235835600BD254E /* GamePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B99342235835600BD254E /* GamePresenter.swift */; };
+		745B99382235962F00BD254E /* GameAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B99372235962F00BD254E /* GameAssembly.swift */; };
 		745B994422382FB500BD254E /* GameStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B994322382FB500BD254E /* GameStrategy.swift */; };
 		745B9946223830AE00BD254E /* RandomStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B9945223830AE00BD254E /* RandomStrategy.swift */; };
 		745B994822383AB000BD254E /* InSequenseStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B994722383AB000BD254E /* InSequenseStrategy.swift */; };
+		745B9950223859D000BD254E /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B994F223859D000BD254E /* AddQuestionViewController.swift */; };
+		745B9952223859E200BD254E /* AddQuestionViewControllerInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B9951223859E200BD254E /* AddQuestionViewControllerInput.swift */; };
+		745B9954223859F900BD254E /* AddQuestionViewControllerOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B9953223859F900BD254E /* AddQuestionViewControllerOutput.swift */; };
+		745B995622385A1800BD254E /* AddQuestionInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B995522385A1800BD254E /* AddQuestionInteractor.swift */; };
+		745B995822385A2E00BD254E /* AddQuestionInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B995722385A2E00BD254E /* AddQuestionInteractorInput.swift */; };
+		745B995C22385A5100BD254E /* AddQuestionInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B995B22385A5100BD254E /* AddQuestionInteractorOutput.swift */; };
+		745B995E22385C4200BD254E /* AddQuestionPresentor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B995D22385C4200BD254E /* AddQuestionPresentor.swift */; };
+		745B996022385C7900BD254E /* AddQuestionAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B995F22385C7900BD254E /* AddQuestionAssembly.swift */; };
+		745B9962223902BE00BD254E /* AddQuestionRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B9961223902BE00BD254E /* AddQuestionRouter.swift */; };
+		745B9964223902D000BD254E /* AddQuestionRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B9963223902D000BD254E /* AddQuestionRouterInput.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,12 +105,12 @@
 		743004FA22355D8200868701 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		743004FD22355E1200868701 /* DataServiceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataServiceImp.swift; sourceTree = "<group>"; };
 		743004FF22355EF600868701 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		74300501223564A100868701 /* StartPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresentor.swift; sourceTree = "<group>"; };
+		74300501223564A100868701 /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
 		743005032235650B00868701 /* StartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
 		743005052235653300868701 /* StartRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouterInput.swift; sourceTree = "<group>"; };
 		74300508223565FB00868701 /* TransitionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionHandler.swift; sourceTree = "<group>"; };
 		7430050B2235669200868701 /* UIViewController + TransitionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + TransitionHandler.swift"; sourceTree = "<group>"; };
-		7430050D2235696500868701 /* StartAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAssambly.swift; sourceTree = "<group>"; };
+		7430050D2235696500868701 /* StartAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartAssembly.swift; sourceTree = "<group>"; };
 		745B992322357D0000BD254E /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		745B992622357D2A00BD254E /* GameViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewControllerInput.swift; sourceTree = "<group>"; };
 		745B992822357D3D00BD254E /* GameViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewControllerOutput.swift; sourceTree = "<group>"; };
@@ -110,12 +119,21 @@
 		745B992E2235803800BD254E /* GameInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameInteractorOutput.swift; sourceTree = "<group>"; };
 		745B9930223582C000BD254E /* GameRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouter.swift; sourceTree = "<group>"; };
 		745B9932223582D200BD254E /* GameRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRouterInput.swift; sourceTree = "<group>"; };
-		745B99342235835600BD254E /* GamePresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresentor.swift; sourceTree = "<group>"; };
-		745B99372235962F00BD254E /* GameAssambly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssambly.swift; sourceTree = "<group>"; };
-		745B99392236E16300BD254E /* BasePresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresentor.swift; sourceTree = "<group>"; };
+		745B99342235835600BD254E /* GamePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePresenter.swift; sourceTree = "<group>"; };
+		745B99372235962F00BD254E /* GameAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAssembly.swift; sourceTree = "<group>"; };
 		745B994322382FB500BD254E /* GameStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameStrategy.swift; sourceTree = "<group>"; };
 		745B9945223830AE00BD254E /* RandomStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomStrategy.swift; sourceTree = "<group>"; };
 		745B994722383AB000BD254E /* InSequenseStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InSequenseStrategy.swift; sourceTree = "<group>"; };
+		745B994F223859D000BD254E /* AddQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewController.swift; sourceTree = "<group>"; };
+		745B9951223859E200BD254E /* AddQuestionViewControllerInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewControllerInput.swift; sourceTree = "<group>"; };
+		745B9953223859F900BD254E /* AddQuestionViewControllerOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewControllerOutput.swift; sourceTree = "<group>"; };
+		745B995522385A1800BD254E /* AddQuestionInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionInteractor.swift; sourceTree = "<group>"; };
+		745B995722385A2E00BD254E /* AddQuestionInteractorInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionInteractorInput.swift; sourceTree = "<group>"; };
+		745B995B22385A5100BD254E /* AddQuestionInteractorOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionInteractorOutput.swift; sourceTree = "<group>"; };
+		745B995D22385C4200BD254E /* AddQuestionPresentor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionPresentor.swift; sourceTree = "<group>"; };
+		745B995F22385C7900BD254E /* AddQuestionAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionAssembly.swift; sourceTree = "<group>"; };
+		745B9961223902BE00BD254E /* AddQuestionRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionRouter.swift; sourceTree = "<group>"; };
+		745B9963223902D000BD254E /* AddQuestionRouterInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionRouterInput.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,8 +285,8 @@
 		743004E82235571C00868701 /* StartScreen */ = {
 			isa = PBXGroup;
 			children = (
-				743004E92235573400868701 /* Assambly */,
-				743004EC2235576300868701 /* Presentor */,
+				743004E92235573400868701 /* Assembly */,
+				743004EC2235576300868701 /* Presenter */,
 				743004EA2235575000868701 /* Router */,
 				743004EB2235575900868701 /* Interactor */,
 				743004ED2235576900868701 /* View */,
@@ -276,12 +294,12 @@
 			path = StartScreen;
 			sourceTree = "<group>";
 		};
-		743004E92235573400868701 /* Assambly */ = {
+		743004E92235573400868701 /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				7430050D2235696500868701 /* StartAssambly.swift */,
+				7430050D2235696500868701 /* StartAssembly.swift */,
 			);
-			path = Assambly;
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		743004EA2235575000868701 /* Router */ = {
@@ -303,12 +321,12 @@
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		743004EC2235576300868701 /* Presentor */ = {
+		743004EC2235576300868701 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				74300501223564A100868701 /* StartPresentor.swift */,
+				74300501223564A100868701 /* StartPresenter.swift */,
 			);
-			path = Presentor;
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 		743004ED2235576900868701 /* View */ = {
@@ -358,7 +376,7 @@
 		745B991B223572BB00BD254E /* PresentationModules */ = {
 			isa = PBXGroup;
 			children = (
-				745B99392236E16300BD254E /* BasePresentor.swift */,
+				745B99492238585A00BD254E /* AddQuestion */,
 				745B991D223572E400BD254E /* ResultsScreen */,
 				745B991C223572D800BD254E /* QuestionsScreen */,
 				743004E82235571C00868701 /* StartScreen */,
@@ -369,10 +387,10 @@
 		745B991C223572D800BD254E /* QuestionsScreen */ = {
 			isa = PBXGroup;
 			children = (
-				745B992222357CC400BD254E /* Assambly */,
+				745B992222357CC400BD254E /* Assembly */,
 				745B992122357CBD00BD254E /* Presenter */,
 				745B992022357CB700BD254E /* Router */,
-				745B991F22357CAD00BD254E /* Inreractor */,
+				745B991F22357CAD00BD254E /* Interactor */,
 				745B991E22357CA100BD254E /* View */,
 			);
 			path = QuestionsScreen;
@@ -395,14 +413,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		745B991F22357CAD00BD254E /* Inreractor */ = {
+		745B991F22357CAD00BD254E /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
 				745B992A2235801400BD254E /* GameInteractor.swift */,
 				745B992C2235802400BD254E /* GameInteractorInput.swift */,
 				745B992E2235803800BD254E /* GameInteractorOutput.swift */,
 			);
-			path = Inreractor;
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		745B992022357CB700BD254E /* Router */ = {
@@ -417,17 +435,17 @@
 		745B992122357CBD00BD254E /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				745B99342235835600BD254E /* GamePresentor.swift */,
+				745B99342235835600BD254E /* GamePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		745B992222357CC400BD254E /* Assambly */ = {
+		745B992222357CC400BD254E /* Assembly */ = {
 			isa = PBXGroup;
 			children = (
-				745B99372235962F00BD254E /* GameAssambly.swift */,
+				745B99372235962F00BD254E /* GameAssembly.swift */,
 			);
-			path = Assambly;
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		745B994222382F2500BD254E /* StrategyService */ = {
@@ -438,6 +456,63 @@
 				745B994722383AB000BD254E /* InSequenseStrategy.swift */,
 			);
 			path = StrategyService;
+			sourceTree = "<group>";
+		};
+		745B99492238585A00BD254E /* AddQuestion */ = {
+			isa = PBXGroup;
+			children = (
+				745B994E2238596900BD254E /* Assembly */,
+				745B994D223858D200BD254E /* Presentor */,
+				745B994C223858CC00BD254E /* Router */,
+				745B994B2238587800BD254E /* Interactor */,
+				745B994A2238587000BD254E /* View */,
+			);
+			path = AddQuestion;
+			sourceTree = "<group>";
+		};
+		745B994A2238587000BD254E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				745B994F223859D000BD254E /* AddQuestionViewController.swift */,
+				745B9951223859E200BD254E /* AddQuestionViewControllerInput.swift */,
+				745B9953223859F900BD254E /* AddQuestionViewControllerOutput.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		745B994B2238587800BD254E /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				745B995522385A1800BD254E /* AddQuestionInteractor.swift */,
+				745B995722385A2E00BD254E /* AddQuestionInteractorInput.swift */,
+				745B995B22385A5100BD254E /* AddQuestionInteractorOutput.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		745B994C223858CC00BD254E /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				745B9961223902BE00BD254E /* AddQuestionRouter.swift */,
+				745B9963223902D000BD254E /* AddQuestionRouterInput.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		745B994D223858D200BD254E /* Presentor */ = {
+			isa = PBXGroup;
+			children = (
+				745B995D22385C4200BD254E /* AddQuestionPresentor.swift */,
+			);
+			path = Presentor;
+			sourceTree = "<group>";
+		};
+		745B994E2238596900BD254E /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				745B995F22385C7900BD254E /* AddQuestionAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -541,9 +616,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				745B993A2236E16300BD254E /* BasePresentor.swift in Sources */,
 				743005042235650B00868701 /* StartRouter.swift in Sources */,
 				743004C722353BEF00868701 /* DIContainer.swift in Sources */,
+				745B9964223902D000BD254E /* AddQuestionRouterInput.swift in Sources */,
 				743004C922353C5B00868701 /* PresentationContainer.swift in Sources */,
 				745B9946223830AE00BD254E /* RandomStrategy.swift in Sources */,
 				745B992922357D3D00BD254E /* GameViewControllerOutput.swift in Sources */,
@@ -552,17 +627,19 @@
 				745B9933223582D200BD254E /* GameRouterInput.swift in Sources */,
 				7430050C2235669200868701 /* UIViewController + TransitionHandler.swift in Sources */,
 				743004F1223557CA00868701 /* StarViewControllerOutput.swift in Sources */,
-				745B99382235962F00BD254E /* GameAssambly.swift in Sources */,
+				745B99382235962F00BD254E /* GameAssembly.swift in Sources */,
 				741208A2222E7C3F00F1DD12 /* StartViewController.swift in Sources */,
 				743004EF223557B000868701 /* StartViewControllerInput.swift in Sources */,
 				745B992422357D0000BD254E /* GameViewController.swift in Sources */,
 				745B992B2235801400BD254E /* GameInteractor.swift in Sources */,
-				745B99352235835600BD254E /* GamePresentor.swift in Sources */,
+				745B99352235835600BD254E /* GamePresenter.swift in Sources */,
 				743004D5223540C900868701 /* QuestionServiceImp.swift in Sources */,
 				743004E2223546EF00868701 /* GameServiceImp.swift in Sources */,
+				745B9952223859E200BD254E /* AddQuestionViewControllerInput.swift in Sources */,
 				743004C522353B9A00868701 /* CoreContainer.swift in Sources */,
 				743004E0223545BD00868701 /* GameSession.swift in Sources */,
 				743004DB2235444200868701 /* Game.swift in Sources */,
+				745B996022385C7900BD254E /* AddQuestionAssembly.swift in Sources */,
 				7430050022355EF600868701 /* Result.swift in Sources */,
 				743004F3223558EB00868701 /* StartInteractor.swift in Sources */,
 				741208A0222E7C3F00F1DD12 /* AppDelegate.swift in Sources */,
@@ -570,18 +647,25 @@
 				745B9931223582C000BD254E /* GameRouter.swift in Sources */,
 				743004FE22355E1200868701 /* DataServiceImp.swift in Sources */,
 				745B992722357D2A00BD254E /* GameViewControllerInput.swift in Sources */,
+				745B9962223902BE00BD254E /* AddQuestionRouter.swift in Sources */,
+				745B9954223859F900BD254E /* AddQuestionViewControllerOutput.swift in Sources */,
 				743004D32235407200868701 /* QuestionService.swift in Sources */,
 				745B992D2235802400BD254E /* GameInteractorInput.swift in Sources */,
 				743004F72235597D00868701 /* StartInteractorOutput.swift in Sources */,
 				743004CF22353DCF00868701 /* ProgressServiceImp.swift in Sources */,
+				745B9950223859D000BD254E /* AddQuestionViewController.swift in Sources */,
 				745B992F2235803800BD254E /* GameInteractorOutput.swift in Sources */,
 				743004CD22353D9D00868701 /* ProgressService.swift in Sources */,
 				745B994422382FB500BD254E /* GameStrategy.swift in Sources */,
 				743004F52235596500868701 /* StartInteractorInput.swift in Sources */,
 				745B994822383AB000BD254E /* InSequenseStrategy.swift in Sources */,
+				745B995E22385C4200BD254E /* AddQuestionPresentor.swift in Sources */,
 				743005062235653300868701 /* StartRouterInput.swift in Sources */,
-				7430050E2235696500868701 /* StartAssambly.swift in Sources */,
-				74300502223564A100868701 /* StartPresentor.swift in Sources */,
+				7430050E2235696500868701 /* StartAssembly.swift in Sources */,
+				745B995C22385A5100BD254E /* AddQuestionInteractorOutput.swift in Sources */,
+				74300502223564A100868701 /* StartPresenter.swift in Sources */,
+				745B995822385A2E00BD254E /* AddQuestionInteractorInput.swift in Sources */,
+				745B995622385A1800BD254E /* AddQuestionInteractor.swift in Sources */,
 				74300509223565FB00868701 /* TransitionHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

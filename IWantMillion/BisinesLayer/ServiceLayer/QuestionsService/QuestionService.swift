@@ -12,4 +12,5 @@ protocol QuestionService {
     
     func getQuestion(withStrategy: Strategy)  -> Question
     func getQuestionQuality() -> Int
+    func addQuestion(question: Question)
 }

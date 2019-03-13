@@ -13,4 +13,8 @@ protocol ProgressService {
     
     func show(answerType: AswerType, complection: @escaping () -> Void)
     
+    func showAlertAboutEmptyText()
+    
+    func showAlertWhenFinishAddingQuestion(complection: @escaping () -> Void)
+    
 }

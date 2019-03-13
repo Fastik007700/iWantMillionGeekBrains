@@ -15,6 +15,8 @@ final class StartViewController: UIViewController {
     
     @IBOutlet weak var questionSequenseControl: UISegmentedControl!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         outputView?.viewLoaded()
@@ -37,6 +39,11 @@ final class StartViewController: UIViewController {
     
     @IBAction func showResults(_ sender: Any) {
         outputView?.tapResults()
+    }
+    
+    
+    @IBAction func addNewQuestion(_ sender: Any) {
+        outputView?.showAddQuestion()
     }
 }
 

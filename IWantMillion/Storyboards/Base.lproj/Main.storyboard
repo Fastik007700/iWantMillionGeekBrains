@@ -55,13 +55,25 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="crW-Pe-iVu">
-                                <rect key="frame" x="57" y="451" width="235" height="29"/>
+                                <rect key="frame" x="70" y="419" width="235" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Случайно"/>
                                     <segment title="Друг за другом"/>
                                 </segments>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ycr-9w-uNr">
+                                <rect key="frame" x="110" y="489" width="155" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title=" Добавить вопрос">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="40V-MM-wYd"/>
+                                    <action selector="showResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kP0-j2-QFq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -90,20 +102,72 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Question View Controller-->
         <scene sceneID="plG-J4-9Eh">
             <objects>
-                <viewController id="hb8-jQ-oGx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addQuestionViewController" id="hb8-jQ-oGx" customClass="AddQuestionViewController" customModule="IWantMillion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fEm-Uu-p2S">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I5G-bo-lbs">
+                                <rect key="frame" x="31" y="129" width="312" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEF-9Z-bSh">
+                                <rect key="frame" x="165" y="246" width="45" height="30"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Далее">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="addNewQuestion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="STy-x7-f5c"/>
+                                    <action selector="nextButtonTapped:" destination="hb8-jQ-oGx" eventType="touchUpInside" id="QSH-5R-xo5"/>
+                                    <action selector="showResults:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DBj-36-fqe"/>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="oKe-NI-hIN">
+                                <rect key="frame" x="31" y="189" width="312" height="29"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Текст вопроса" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qK-jl-nt3">
+                                <rect key="frame" x="129.5" y="69" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="I5G-bo-lbs" firstAttribute="top" secondItem="8qK-jl-nt3" secondAttribute="bottom" constant="39" id="1hP-nW-fj6"/>
+                            <constraint firstItem="I5G-bo-lbs" firstAttribute="leading" secondItem="wqn-R1-vGT" secondAttribute="leading" constant="31" id="3cK-AF-Jn2"/>
+                            <constraint firstItem="8qK-jl-nt3" firstAttribute="top" secondItem="wqn-R1-vGT" secondAttribute="top" constant="49" id="3qH-st-qXO"/>
+                            <constraint firstItem="oKe-NI-hIN" firstAttribute="top" secondItem="I5G-bo-lbs" secondAttribute="bottom" constant="30" id="Cmz-av-7kc"/>
+                            <constraint firstItem="wqn-R1-vGT" firstAttribute="trailing" secondItem="oKe-NI-hIN" secondAttribute="trailing" constant="32" id="MHS-mZ-ie7"/>
+                            <constraint firstItem="oKe-NI-hIN" firstAttribute="leading" secondItem="wqn-R1-vGT" secondAttribute="leading" constant="31" id="W7X-Yk-Yw3"/>
+                            <constraint firstItem="dEF-9Z-bSh" firstAttribute="centerX" secondItem="fEm-Uu-p2S" secondAttribute="centerX" id="wDS-BR-Tfh"/>
+                            <constraint firstItem="8qK-jl-nt3" firstAttribute="centerX" secondItem="fEm-Uu-p2S" secondAttribute="centerX" id="wbC-Xc-tmn"/>
+                            <constraint firstItem="wqn-R1-vGT" firstAttribute="trailing" secondItem="I5G-bo-lbs" secondAttribute="trailing" constant="32" id="xpt-YZ-i5j"/>
+                            <constraint firstItem="dEF-9Z-bSh" firstAttribute="top" secondItem="oKe-NI-hIN" secondAttribute="bottom" constant="29" id="y3Y-XO-1YS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wqn-R1-vGT"/>
                     </view>
+                    <connections>
+                        <outlet property="chooseCorrectAnswer" destination="oKe-NI-hIN" id="BQh-5j-vAJ"/>
+                        <outlet property="mainLabel" destination="8qK-jl-nt3" id="zWd-KR-hJx"/>
+                        <outlet property="mainTextField" destination="I5G-bo-lbs" id="nkW-YG-dpa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KGA-7f-xgg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="821"/>
+            <point key="canvasLocation" x="136.80000000000001" y="820.83958020989508"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="JFg-DB-VBP">

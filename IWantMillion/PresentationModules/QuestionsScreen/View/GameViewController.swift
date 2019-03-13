@@ -20,6 +20,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var answer3Button: UIButton!
     @IBOutlet weak var answer4button: UIButton!
     
+    
     private var gameSession = GameSession()
 
     override func viewDidLoad() {
@@ -46,7 +47,6 @@ class GameViewController: UIViewController {
     
     @IBAction func tap2(_ sender: Any) {
         outputView?.tapSecond()
-        print(Game.shared.gameSession?.correctQuestionsCount)
     }
     
     @IBAction func tap3(_ sender: Any) {

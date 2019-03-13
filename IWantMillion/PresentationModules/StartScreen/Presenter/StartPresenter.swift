@@ -9,7 +9,7 @@
 import Foundation
 
 
-final class StartPresentor {
+final class StartPresenter {
     
     fileprivate var interactor: StartInteractorInput
     fileprivate var router: StartRouterInput
@@ -25,7 +25,12 @@ final class StartPresentor {
     }
 }
 
-extension StartPresentor: StartViewControllerOutput {
+extension StartPresenter: StartViewControllerOutput {
+    
+    func showAddQuestion() {
+        self.router.openAddQuestion()
+    }
+    
     
     func checkStrategy(strategyNumber: Int) {
         self.strategy = interactor.getStrategy(strategyNumber: strategyNumber)
@@ -49,6 +54,6 @@ extension StartPresentor: StartViewControllerOutput {
 
 }
 
-extension StartPresentor: StartInteractorOutput {
+extension StartPresenter: StartInteractorOutput {
     
 }

@@ -9,15 +9,16 @@
 import UIKit
 
 
-class GameAssambly {
+class GameAssembly {
     
     static func assamblyModule(with viewController: GameViewController, withStrategy: Strategy) {
         
         let router = GameRouter()
         let dataService = DIContainerImp.coreContainer.makeDataService
         let questionServise = DIContainerImp.coreContainer.makeQuestionService
+        let progressiveService = DIContainerImp.presentationContainer.progressService
         let interactor = GameInteractor(questionService: questionServise, dataService: dataService)
-        let presentor = GamePresentor(view: viewController, interactor: interactor, router: router, withStrategy: withStrategy)
+        let presentor = GamePresenter(view: viewController, interactor: interactor, router: router, withStrategy: withStrategy, progressiveService: progressiveService)
         
         viewController.outputView = presentor
         interactor.output = presentor
@@ -30,7 +31,7 @@ class GameAssambly {
         
         let viewController = storyboard.instantiateViewController(withIdentifier: "gameViewController") as! GameViewController
         
-        GameAssambly.assamblyModule(with: viewController, withStrategy: withStrategy)
+        GameAssembly.assamblyModule(with: viewController, withStrategy: withStrategy)
         
         return viewController
     }

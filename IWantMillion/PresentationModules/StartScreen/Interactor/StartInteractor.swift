@@ -26,14 +26,12 @@ extension StartInteractor: StartInteractorInput {
         var returnResult = 0
         
         guard let results = self.dataService?.loadResults() else {return 0}
-        print(results)
         
         for result in results {
             if result.percentOfCorrect > returnResult {
                 returnResult = result.percentOfCorrect
             }
         }
-        print(returnResult)
         return returnResult
         
     }

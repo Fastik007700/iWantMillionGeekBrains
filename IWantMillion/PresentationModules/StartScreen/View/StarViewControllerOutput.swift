@@ -21,4 +21,6 @@ protocol StartViewControllerOutput: class {
     
     func checkStrategy(strategyNumber: Int)
     
+    func showAddQuestion()
+    
 }

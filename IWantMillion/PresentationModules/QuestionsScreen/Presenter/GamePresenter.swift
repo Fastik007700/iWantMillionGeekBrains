@@ -9,25 +9,28 @@
 import Foundation
 
 
-final class GamePresentor: BasePresentor {
+final class GamePresenter {
     
     fileprivate var view: GameViewControllerInput
     fileprivate var interactor: GameInteractorInput
     fileprivate var router: GameRouterInput
     
+    fileprivate var progressiveService: ProgressService
+    
     private var strategy: Strategy
     
     private var question: Question!
     
-    init(view: GameViewControllerInput, interactor: GameInteractorInput, router: GameRouterInput, withStrategy: Strategy) {
+    init(view: GameViewControllerInput, interactor: GameInteractorInput, router: GameRouterInput, withStrategy: Strategy, progressiveService: ProgressService ) {
         self.view = view
         self.interactor = interactor
         self.router = router
         self.strategy = withStrategy
+        self.progressiveService = progressiveService
     }
 }
 
-extension GamePresentor: GameViewControllerOutput {
+extension GamePresenter: GameViewControllerOutput {
     
     func viewLoaded() {
         
@@ -38,41 +41,44 @@ extension GamePresentor: GameViewControllerOutput {
     }
     
     func tapFirst() {
-
+        
         interactor.questionChecker(questionInCheker: question, correctAnswerNumber: .first)
         
     }
     
     func tapSecond() {
-
+        
         interactor.questionChecker(questionInCheker: question, correctAnswerNumber: .second)
     }
     
     func tapThird() {
-
+        
         interactor.questionChecker(questionInCheker: question, correctAnswerNumber: .third)
     }
     
     func tapFourth() {
-
+        
         interactor.questionChecker(questionInCheker: question, correctAnswerNumber: .fourth)
         
     }
 }
 
 
-extension GamePresentor: GameInteractorOutput {
+extension GamePresenter: GameInteractorOutput {
     
     func correctAswer() {
         if interactor.getQuestionsCount() == interactor.getQuestionNumberInGameSession() {
-
+            
             debugPrint("закончилисьб вопросы")
             let result = Result(percentOfCorrect: Int((interactor.getCorrectAnswerCount()/interactor.getQuestionsCount()) * 100), date: Date())
-
+            
             interactor.saveResult(result: result)
+            
+            Game.shared.gameSession = nil
             
             self.progressiveService.show(answerType: .lastQuestion, complection: { [weak self] in self?.router.stopGame()})
         }
+            
         else {
             guard let question = interactor.getQuestion(withStrategy: self.strategy) else {return}
             self.question = question
@@ -87,17 +93,20 @@ extension GamePresentor: GameInteractorOutput {
     func notCorrectAswer() {
         let resultInt = Int(100 * interactor.getCorrectAnswerCount()/interactor.getQuestionsCount())
         let result = Result(percentOfCorrect: resultInt, date: Date())
-
+        
         interactor.saveResult(result: result)
         debugPrint("неправильно ответил")
+        
+        Game.shared.gameSession = nil
+        
         self.progressiveService.show(answerType: .notCorrect, complection: { [weak self] in self?.router.stopGame()})
-
+        
     }
     
     
 }
 
-extension GamePresentor: GameSessionDelegate {
+extension GamePresenter: GameSessionDelegate {
     
     func returnQuestionNumberInGameSession() -> Int {
         return self.interactor.getQuestionNumberInGameSession()
@@ -110,5 +119,5 @@ extension GamePresentor: GameSessionDelegate {
     func returnCorrectQuestionsNumber() -> Int {
         return self.interactor.getCorrectAnswerCount()
     }
-
+    
 }

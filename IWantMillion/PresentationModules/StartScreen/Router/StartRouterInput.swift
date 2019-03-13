@@ -12,5 +12,7 @@ protocol StartRouterInput {
     
     func showGameScreen(withStrategy: Strategy)
     
+    func openAddQuestion()
+    
     func showResultsScreen()
 }

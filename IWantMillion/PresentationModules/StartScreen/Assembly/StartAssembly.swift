@@ -8,14 +8,14 @@
 
 import UIKit
 
-class StartAssambly {
+class StartAssembly {
     
     static func assamblyModule(with viewController: StartViewController) {
         
         let router = StartRouter()
         let dataService = DIContainerImp.coreContainer.makeDataService
         let interactor = StartInteractor(dataService: dataService)
-        let presentor = StartPresentor(interactor: interactor, router: router, view: viewController)
+        let presentor = StartPresenter(interactor: interactor, router: router, view: viewController)
         
         viewController.outputView = presentor
         interactor.output = presentor
@@ -28,7 +28,7 @@ class StartAssambly {
         
         let viewController = storyboard.instantiateViewController(withIdentifier: "startViewController") as! StartViewController
         
-        StartAssambly.assamblyModule(with: viewController)
+        StartAssembly.assamblyModule(with: viewController)
         
         return viewController
     }
